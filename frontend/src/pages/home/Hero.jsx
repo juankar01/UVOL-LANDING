@@ -14,7 +14,7 @@ export default function Hero() {
           <span className="h-5 w-5 rounded-full border border-white bg-neutral-400" />
         </div>
 
-        <span>Menos 0 usuarios activos pa</span>
+        <span>100 Usuarios activos</span>
       </div>
 
       <h1 className="mx-auto mt-6 max-w-3xl text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl">
