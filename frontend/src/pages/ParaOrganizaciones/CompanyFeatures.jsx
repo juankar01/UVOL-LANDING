@@ -2,6 +2,9 @@ import { motion } from "framer-motion";
 import FeatureTimelineItem from "../Inicio/FeatureTimelineItem";
 
 export default function CompanyFeatures() {
+  const appUrl = import.meta.env.VITE_APP_URL || "";
+  const registerUrl = appUrl ? `${appUrl}/register` : "#";
+
   return (
     <div id="soluciones" className="relative">
       <div className="pointer-events-none absolute inset-y-0 left-1/2 hidden -translate-x-1/2 lg:block">
@@ -23,7 +26,7 @@ export default function CompanyFeatures() {
           subtitle="Moviliza a tu equipo con propósito"
           description="Activa la participación de tus colaboradores en jornadas sociales y ambientales alineadas con los valores de tu empresa."
           ctaText="¡Únete ya!"
-          ctaHref="/register"
+          ctaHref={registerUrl}
           imageSide="right"
           imageSrc="/img/ForCompanies/feature-img1.webp"
         />
@@ -40,7 +43,7 @@ export default function CompanyFeatures() {
           subtitle="Convierte acciones en resultados tangibles"
           description="Accede a informes detallados con datos de participación, horas invertidas y logros alcanzados."
           ctaText="¡Únete ya!"
-          ctaHref="/register"
+          ctaHref={registerUrl}
           imageSide="left"
           imageSrc="/img/ForCompanies/feature-img2.webp"
         />
@@ -57,7 +60,7 @@ export default function CompanyFeatures() {
           subtitle="Haz visible tu compromiso con la sociedad"
           description="Publica tus acciones en un entorno auténtico y conectado, donde tu compromiso inspira a otros."
           ctaText="¡Únete ya!"
-          ctaHref="/register"
+          ctaHref={registerUrl}
           imageSide="right"
           imageSrc="/img/ForCompanies/feature-img3.webp"
         />

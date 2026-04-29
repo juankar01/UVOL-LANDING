@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Section from "../../components/layout/Section";
 import Button from "../../components/ui/Button";
 
@@ -13,6 +14,12 @@ export default function FeatureTimelineItem({
   imageSide = "left",
 }) {
   const isLeft = imageSide === "left";
+
+  const isExternalCta = ctaHref?.startsWith("http");
+
+  const ctaProps = isExternalCta
+    ? { as: "a", href: ctaHref }
+    : { as: Link, to: ctaHref || "#" };
 
   return (
     <Section className="py-14 sm:py-16 lg:py-20">
@@ -45,7 +52,7 @@ export default function FeatureTimelineItem({
           </p>
 
           {ctaText ? (
-            <Button as="a" href={ctaHref || "#"} className="mt-6 gap-2">
+            <Button {...ctaProps} className="mt-6 gap-2">
               {ctaText} <span aria-hidden>↗</span>
             </Button>
           ) : null}
@@ -72,7 +79,9 @@ export default function FeatureTimelineItem({
             <div className="pl-10">
               <div className="max-w-[420px]">
                 {eyebrow ? (
-                  <p className="text-xs font-medium text-neutral-500">{eyebrow}</p>
+                  <p className="text-xs font-medium text-neutral-500">
+                    {eyebrow}
+                  </p>
                 ) : null}
 
                 <h3 className="mt-3 text-2xl font-semibold tracking-tight sm:text-3xl">
@@ -88,7 +97,7 @@ export default function FeatureTimelineItem({
                 </p>
 
                 {ctaText ? (
-                  <Button as="a" href={ctaHref || "#"} className="mt-6 gap-2">
+                  <Button {...ctaProps} className="mt-6 gap-2">
                     {ctaText} <span aria-hidden>↗</span>
                   </Button>
                 ) : null}
@@ -100,7 +109,9 @@ export default function FeatureTimelineItem({
             <div className="flex justify-end pr-10">
               <div className="max-w-[420px]">
                 {eyebrow ? (
-                  <p className="text-xs font-medium text-neutral-500">{eyebrow}</p>
+                  <p className="text-xs font-medium text-neutral-500">
+                    {eyebrow}
+                  </p>
                 ) : null}
 
                 <h3 className="mt-3 text-2xl font-semibold tracking-tight sm:text-3xl">
@@ -116,7 +127,7 @@ export default function FeatureTimelineItem({
                 </p>
 
                 {ctaText ? (
-                  <Button as="a" href={ctaHref || "#"} className="mt-6 gap-2">
+                  <Button {...ctaProps} className="mt-6 gap-2">
                     {ctaText} <span aria-hidden>↗</span>
                   </Button>
                 ) : null}
