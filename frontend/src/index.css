@@ -1,5 +1,24 @@
 @import "tailwindcss";
 
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+html,
+body {
+  overflow: hidden;
+}
+
+.app-scroll {
+  height: 100dvh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior: none;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;

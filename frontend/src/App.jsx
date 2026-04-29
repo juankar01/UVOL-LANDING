@@ -2,15 +2,15 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 
-import Home from "./pages/home/Home";
-import HowItWorks from "./pages/HowItWorks";
-import Privacy from "./pages/Privacy";
-import ForCompanies from "./pages/ForCompanies";
-import HelpCenter from "./pages/HelpCenter";
+import Home from "./pages/Inicio/Home";
+import HowItWorks from "./pages/ComoFunciona/HowItWorks";
+import Privacy from "./pages/Privacidad/Privacy";
+import ForCompanies from "./pages/ParaOrganizaciones/ForCompanies";
+import HelpCenter from "./pages/CentroAyuda/HelpCenter";
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-white text-neutral-900">
+    <div className="app-scroll bg-white text-neutral-900">
       <Navbar />
 
       <main>

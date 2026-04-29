@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import Section from "../../components/layout/Section";
 import FAQAccordion from "../../components/ui/FAQAccordion";
 
@@ -31,7 +32,13 @@ const faqItems = [
 export default function FAQSection() {
   return (
     <Section className="pt-16 sm:pt-20">
-      <div className="mx-auto max-w-3xl lg:max-w-4xl">
+      <motion.div
+        initial={{ opacity: 0, y: 24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.25 }}
+        transition={{ duration: 0.45, ease: "easeOut" }}
+        className="mx-auto max-w-3xl lg:max-w-4xl"
+      >
         <div className="text-center">
           <h2 className="text-3xl font-semibold tracking-tight text-neutral-900 sm:text-4xl">
             Todo lo que quieres saber
@@ -52,7 +59,7 @@ export default function FAQSection() {
             <FAQAccordion items={faqItems} />
           </div>
         </div>
-      </div>
+      </motion.div>
     </Section>
   );
 }
