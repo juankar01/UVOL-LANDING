@@ -14,9 +14,8 @@ export default function Navbar() {
       <header className="sticky top-0 z-40 border-b border-neutral-200 bg-white">
         <Container className="flex h-14 items-center justify-between">
           <div className="flex items-center gap-3">
-            <img src="/logo.svg" alt="Uvol" className="w-10 h-10" />
-            <NavLink to="/" className="font-semibold tracking-tight">
-              Uvol
+            <NavLink to="/" className="flex items-center">
+              <img src="/Logo-Uvol.svg" alt="Uvol" className="h-6 w-auto" />
             </NavLink>
           </div>
 
