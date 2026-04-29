@@ -3,6 +3,7 @@ import Section from "../../components/layout/Section";
 import Button from "../../components/ui/Button";
 
 export default function ForCompaniesHero() {
+  const appUrl = import.meta.env.VITE_APP_URL || "";
   return (
     <Section className="!py-0">
       <div className="py-16 sm:py-20 lg:grid lg:min-h-[calc(100vh-56px)] lg:grid-cols-2 lg:items-center lg:gap-12 lg:py-0">
@@ -45,7 +46,11 @@ export default function ForCompaniesHero() {
           </p>
 
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row lg:justify-start">
-            <Button as="a" href="/register" className="justify-center">
+            <Button
+              as="a"
+              href={appUrl ? `${appUrl}/register` : "#"}
+              className="justify-center"
+            >
               Regístrate
             </Button>
 
