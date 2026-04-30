@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Section from "../../components/layout/Section";
 import Button from "../../components/ui/Button";
+import { typography } from "../../styles/typography";
 
 export default function FeatureTimelineItem({
   eyebrow,
@@ -35,21 +36,15 @@ export default function FeatureTimelineItem({
         </div>
 
         <div className="w-full">
-          {eyebrow ? (
-            <p className="text-xs font-medium text-neutral-500">{eyebrow}</p>
-          ) : null}
+          {eyebrow ? <p className={typography.eyebrow}>{eyebrow}</p> : null}
 
-          <h3 className="mt-3 text-2xl font-semibold tracking-tight sm:text-3xl">
-            {title}
-          </h3>
+          <h3 className={`mt-3 ${typography.cardTitle}`}>{title}</h3>
 
           {subtitle ? (
             <p className="mt-2 text-sm text-neutral-600">{subtitle}</p>
           ) : null}
 
-          <p className="mt-4 text-sm leading-6 text-neutral-600 sm:text-base">
-            {description}
-          </p>
+          <p className={`mt-4 ${typography.paragraph}`}>{description}</p>
 
           {ctaText ? (
             <Button {...ctaProps} className="mt-6 gap-2">
@@ -79,20 +74,16 @@ export default function FeatureTimelineItem({
             <div className="pl-10">
               <div className="max-w-[420px]">
                 {eyebrow ? (
-                  <p className="text-xs font-medium text-neutral-500">
-                    {eyebrow}
-                  </p>
+                  <p className={typography.eyebrow}>{eyebrow}</p>
                 ) : null}
 
-                <h3 className="mt-3 text-2xl font-semibold tracking-tight sm:text-3xl">
-                  {title}
-                </h3>
+                <h3 className={`mt-3 ${typography.cardTitle}`}>{title}</h3>
 
                 {subtitle ? (
                   <p className="mt-2 text-sm text-neutral-600">{subtitle}</p>
                 ) : null}
 
-                <p className="mt-4 text-sm leading-6 text-neutral-600 sm:text-base">
+                <p className={`mt-4 ${typography.paragraph}`}>
                   {description}
                 </p>
 
@@ -109,20 +100,16 @@ export default function FeatureTimelineItem({
             <div className="flex justify-end pr-10">
               <div className="max-w-[420px]">
                 {eyebrow ? (
-                  <p className="text-xs font-medium text-neutral-500">
-                    {eyebrow}
-                  </p>
+                  <p className={typography.eyebrow}>{eyebrow}</p>
                 ) : null}
 
-                <h3 className="mt-3 text-2xl font-semibold tracking-tight sm:text-3xl">
-                  {title}
-                </h3>
+                <h3 className={`mt-3 ${typography.cardTitle}`}>{title}</h3>
 
                 {subtitle ? (
                   <p className="mt-2 text-sm text-neutral-600">{subtitle}</p>
                 ) : null}
 
-                <p className="mt-4 text-sm leading-6 text-neutral-600 sm:text-base">
+                <p className={`mt-4 ${typography.paragraph}`}>
                   {description}
                 </p>
 

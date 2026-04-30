@@ -56,7 +56,7 @@ export default function CompanyFeatures() {
         transition={{ duration: 0.45, ease: "easeOut" }}
       >
         <FeatureTimelineItem
-          title="Visibilidad responsable"
+          title="Impacto visible"
           subtitle="Haz visible tu compromiso con la sociedad"
           description="Publica tus acciones en un entorno auténtico y conectado, donde tu compromiso inspira a otros."
           ctaText="¡Únete ya!"

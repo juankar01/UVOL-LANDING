@@ -2,6 +2,7 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Section from "../../components/layout/Section";
 import Button from "../../components/ui/Button";
+import { typography } from "../../styles/typography";
 
 const steps = [
   {
@@ -50,6 +51,8 @@ const steps = [
 
 export default function HowItWorksSteps() {
   const [activeStep, setActiveStep] = useState(steps[0]);
+  const appUrl = import.meta.env.VITE_APP_URL || "";
+  const loginUrl = appUrl ? `${appUrl}/login` : "#";
 
   return (
     <Section>
@@ -103,16 +106,16 @@ export default function HowItWorksSteps() {
               transition={{ duration: 0.25, ease: "easeOut" }}
               className="mt-8"
             >
-              <h2 className="mx-auto max-w-3xl text-3xl font-semibold tracking-tight text-neutral-900 sm:text-4xl">
+              <h2 className={`mx-auto max-w-3xl ${typography.sectionTitle}`}>
                 {activeStep.title}
               </h2>
 
-              <p className="mx-auto mt-5 max-w-xl text-sm leading-6 text-neutral-600 sm:text-base">
+              <p className={`mx-auto mt-5 max-w-xl ${typography.paragraph}`}>
                 {activeStep.description}
               </p>
 
               <div className="mt-6 flex justify-center">
-                <Button as="a" href="/register">
+                <Button as="a" href={loginUrl}>
                   ¡Empezar ahora!
                 </Button>
               </div>
@@ -148,16 +151,16 @@ export default function HowItWorksSteps() {
                 exit={{ opacity: 0, y: -8 }}
                 transition={{ duration: 0.25, ease: "easeOut" }}
               >
-                <h2 className="mx-auto max-w-3xl text-3xl font-semibold tracking-tight text-neutral-900 sm:text-4xl lg:text-5xl">
+                <h2 className={`mx-auto max-w-3xl ${typography.sectionTitle}`}>
                   {activeStep.title}
                 </h2>
 
-                <p className="mx-auto mt-5 max-w-xl text-sm leading-6 text-neutral-600 sm:text-base">
+                <p className={`mx-auto mt-5 max-w-xl ${typography.paragraph}`}>
                   {activeStep.description}
                 </p>
 
                 <div className="mt-6 flex justify-center">
-                  <Button as="a" href="/register">
+                  <Button as="a" href={loginUrl}>
                     ¡Empezar ahora!
                   </Button>
                 </div>

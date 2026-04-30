@@ -1,30 +1,31 @@
 import { motion } from "framer-motion";
 import Section from "../../components/layout/Section";
-import { ShieldCheck, EyeOff, ShieldPlus, BadgeCheck } from "lucide-react";
+import { ShieldCheck, Building2, ShieldPlus, BadgeCheck } from "lucide-react";
+import { typography } from "../../styles/typography";
 
 const cards = [
   {
     title: "Seguridad en la plataforma",
     description:
-      "Monitoreamos la actividad para prevenir fraudes, suplantación y mal uso. Contamos con verificación de identidad para organizaciones y protocolos de acción ante reportes.",
+      "Trabajamos para mantener una comunidad confiable. Revisamos reportes, cuidamos el acceso a las cuentas y buscamos prevenir usos indebidos dentro de la plataforma.",
     Icon: ShieldCheck,
   },
   {
-    title: "Control de tu visibilidad",
+    title: "Cuentas responsables",
     description:
-      "Decide quién puede ver tu perfil, tus publicaciones y tu historial de participación. Puedes modificar tus ajustes de privacidad en cualquier momento desde tu cuenta.",
-    Icon: EyeOff,
+      "Las cuentas de organizaciones pueden pasar por revisión antes de publicar actividades. Esto ayuda a que los voluntarios participen con mayor confianza.",
+    Icon: Building2,
   },
   {
     title: "Protección de tus datos",
     description:
-      "Guardamos tu información personal de forma segura con tecnología de cifrado, servidores protegidos y buenas prácticas en el manejo de datos. Nunca vendemos ni compartimos tus datos con terceros sin tu consentimiento.",
+      "Usamos tu información solo para el funcionamiento básico de Uvol, como crear tu cuenta, mostrar tu perfil, gestionar eventos y facilitar la comunicación.",
     Icon: ShieldPlus,
   },
   {
-    title: "Tus derechos",
+    title: "Soporte y reportes",
     description:
-      "Tienes acceso total a tu información: puedes consultarla, modificarla, descargarla o eliminarla cuando quieras. En Uvol, tus derechos están protegidos y siempre tendrás el control de tu experiencia en la plataforma.",
+      "Si encuentras una cuenta sospechosa, un evento confuso o algún problema con tu perfil, puedes contactar al equipo de soporte para revisar el caso.",
     Icon: BadgeCheck,
   },
 ];
@@ -51,11 +52,9 @@ export default function PrivacyCards() {
               <Icon size={34} strokeWidth={1.8} />
             </div>
 
-            <h2 className="mt-8 text-2xl font-semibold tracking-tight text-neutral-900 sm:text-3xl">
-              {title}
-            </h2>
+            <h2 className={`mt-8 ${typography.cardTitle}`}>{title}</h2>
 
-            <p className="mx-auto mt-3 max-w-md text-sm leading-6 text-neutral-600 sm:text-base">
+            <p className={`mx-auto mt-3 max-w-md ${typography.paragraph}`}>
               {description}
             </p>
           </motion.article>

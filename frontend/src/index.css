@@ -38,3 +38,17 @@ body {
     transform: translateY(0);
   }
 }
+
+.policy-content p {
+  margin-top: 0.75rem;
+}
+
+.policy-content ul {
+  margin-top: 1rem;
+  margin-left: 1.25rem;
+  list-style: disc;
+}
+
+.policy-content li {
+  margin-top: 0.75rem;
+}

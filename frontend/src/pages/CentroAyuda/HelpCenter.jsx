@@ -3,10 +3,11 @@ import { motion } from "framer-motion";
 import { Search } from "lucide-react";
 import Section from "../../components/layout/Section";
 import FAQAccordion from "../../components/ui/FAQAccordion";
+import { typography } from "../../styles/typography";
 
 const helpSections = [
   {
-    title: "Cuenta y Seguridad",
+    title: "Cuenta y acceso",
     items: [
       {
         id: "cuenta-1",
@@ -16,104 +17,110 @@ const helpSections = [
       },
       {
         id: "cuenta-2",
+        question: "¿Puedo iniciar sesión con Google?",
+        answer:
+          "Sí. Uvol permite iniciar sesión con Google si esa opción está disponible en la pantalla de acceso.",
+      },
+      {
+        id: "cuenta-3",
         question: "¿Olvidé mi contraseña, cómo la recupero?",
         answer:
           "En la pantalla de inicio de sesión selecciona la opción de recuperar contraseña y sigue las instrucciones enviadas a tu correo.",
       },
       {
-        id: "cuenta-3",
+        id: "cuenta-4",
         question:
           "¿Puedo cambiar mi tipo de perfil de voluntario a organización?",
         answer:
-          "Una vez creada la cuenta con el rol especificado, así se quedará. Las cuentas de organización pasan por una verificación antes de ser creadas.",
+          "No por el momento. Una vez creada la cuenta con un tipo de perfil, se mantiene así. Si necesitas una cuenta de organización, debes crearla como organización desde el registro.",
       },
     ],
   },
   {
-    title: "Voluntariado y Participación",
+    title: "Voluntariado y participación",
     items: [
       {
         id: "voluntariado-1",
         question: "¿Cómo encuentro oportunidades de voluntariado?",
         answer:
-          "Puedes explorar oportunidades desde la sección de eventos o desde las recomendaciones de otros eventos.",
+          "Puedes explorar oportunidades desde la sección de eventos y revisar las actividades publicadas por organizaciones.",
       },
       {
         id: "voluntariado-2",
         question: "¿Qué tipos de actividades puedo realizar como voluntario?",
         answer:
-          "Puedes participar en actividades sociales, ambientales, educativas, comunitarias o eventos organizados por organizaciones verificadas.",
+          "Puedes participar en actividades sociales, ambientales, educativas, comunitarias o eventos organizados por organizaciones registradas en la plataforma.",
       },
       {
         id: "voluntariado-3",
         question:
           "¿Qué hago si no puedo asistir a un evento al que me inscribí?",
         answer:
-          "Puedes cancelar tu participación desde el detalle del evento para que la organización tenga información actualizada.",
+          "Puedes cancelar tu participación desde el detalle del evento, para que la organización tenga información actualizada sobre los asistentes.",
       },
       {
         id: "voluntariado-4",
-        question: "¿Recibo algún tipo de reconocimiento o certificado?",
+        question: "¿Uvol entrega certificados de participación?",
         answer:
-          "Las organizaciones pueden registrar tu participación y, según el evento, emitir reconocimientos o certificados.",
+          "Por ahora Uvol no emite certificados automáticos. Si una organización ofrece algún reconocimiento, deberá informarlo directamente en el evento.",
       },
     ],
   },
   {
-    title: "Organizaciones y Eventos",
+    title: "Organizaciones y eventos",
     items: [
       {
         id: "org-1",
         question: "¿Cómo registro mi organización en Uvol?",
         answer:
-          "Selecciona el registro como organización, completa los datos solicitados y espera la validación correspondiente.",
+          "Debes seleccionar el registro como organización, completar los datos solicitados y esperar la revisión correspondiente antes de usar ciertas funciones.",
       },
       {
         id: "org-2",
-        question: "¿Qué requisitos necesito para publicar un evento?",
+        question: "¿Qué necesito para publicar un evento?",
         answer:
-          "Debes tener un perfil de organización, completar la información del evento y cumplir con las normas de publicación de la plataforma.",
+          "Debes tener una cuenta de organización y completar la información básica del evento, como título, descripción, fecha, ubicación y cupos disponibles.",
       },
       {
         id: "org-3",
         question: "¿Puedo editar un evento ya publicado?",
         answer:
-          "Sí, podrás editar detalles del evento siempre que no afecten de forma crítica a los voluntarios inscritos.",
+          "Sí, puedes editar información del evento. Es recomendable hacerlo con responsabilidad para no confundir a los voluntarios inscritos.",
       },
       {
         id: "org-4",
         question: "¿Cómo gestiono la asistencia a mis eventos?",
         answer:
-          "Desde el panel del evento podrás revisar inscritos, asistencia y datos básicos de participación.",
+          "Desde el detalle o panel del evento puedes revisar la información de los voluntarios inscritos y hacer seguimiento básico de la participación.",
       },
     ],
   },
   {
-    title: "Privacidad y Configuración",
+    title: "Seguridad y soporte",
     items: [
       {
-        id: "privacidad-1",
-        question: "¿Quién puede ver mis publicaciones y eventos?",
+        id: "soporte-1",
+        question: "¿Qué hago si veo una cuenta sospechosa?",
         answer:
-          "Tú decides la visibilidad de tu actividad según las opciones disponibles en la configuración de privacidad.",
+          "Puedes reportar la situación al equipo de soporte para que sea revisada. Uvol busca mantener una comunidad segura y confiable.",
       },
       {
-        id: "privacidad-2",
-        question: "¿Cómo configuro mi visibilidad?",
+        id: "soporte-2",
+        question: "¿Qué hago si encuentro un evento falso o confuso?",
         answer:
-          "Puedes ajustar tu visibilidad desde la configuración de tu perfil y modificarla cuando lo necesites.",
+          "Repórtalo al equipo de soporte. Revisaremos la información del evento y tomaremos las medidas necesarias según el caso.",
       },
       {
-        id: "privacidad-3",
+        id: "soporte-3",
         question: "¿Puedo eliminar mi cuenta?",
         answer:
-          "Sí, puedes solicitar la eliminación de tu cuenta desde configuración o contactando al centro de ayuda.",
+          "Sí. Puedes solicitar la eliminación de tu cuenta comunicándote con el equipo de soporte de Uvol.",
       },
       {
-        id: "privacidad-4",
-        question: "¿Dónde gestiono mis notificaciones?",
+        id: "soporte-4",
+        question: "¿Dónde puedo pedir ayuda?",
         answer:
-          "Las notificaciones se gestionan desde la configuración de tu cuenta, donde podrás activar o desactivar preferencias.",
+          "Puedes escribir al correo de soporte o usar los canales de ayuda disponibles en la plataforma cuando estén habilitados.",
       },
     ],
   },
@@ -148,9 +155,7 @@ export default function HelpCenter() {
         transition={{ duration: 0.45, ease: "easeOut" }}
         className="mx-auto max-w-3xl py-16 sm:py-20 lg:py-20"
       >
-        <h1 className="text-4xl font-semibold tracking-tight text-neutral-900 sm:text-5xl">
-          Centro de ayuda uvol
-        </h1>
+        <h1 className={typography.heroTitle}>Centro de ayuda Uvol</h1>
 
         <div className="relative mt-6">
           <Search
@@ -170,9 +175,7 @@ export default function HelpCenter() {
         <div className="mt-14 space-y-16">
           {filteredSections.map((section) => (
             <div key={section.title}>
-              <h2 className="text-2xl font-semibold tracking-tight text-neutral-900 sm:text-3xl">
-                {section.title}
-              </h2>
+              <h2 className={typography.cardTitle}>{section.title}</h2>
 
               <div className="mt-6">
                 <FAQAccordion items={section.items} />
@@ -182,11 +185,11 @@ export default function HelpCenter() {
 
           {filteredSections.length === 0 ? (
             <div className="rounded-[24px] border border-neutral-200 bg-neutral-50 px-6 py-10 text-center">
-              <h2 className="text-xl font-semibold text-neutral-900">
+              <h2 className={typography.cardTitle}>
                 No encontramos resultados
               </h2>
 
-              <p className="mx-auto mt-2 max-w-md text-sm leading-6 text-neutral-600">
+              <p className={`mx-auto mt-2 max-w-md ${typography.paragraph}`}>
                 Intenta buscar con otras palabras o revisa las categorías del
                 centro de ayuda.
               </p>

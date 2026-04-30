@@ -3,22 +3,22 @@ import Section from "../../components/layout/Section";
 
 const testimonials = [
   {
-    name: "Rose Yaeger",
+    name: "Dana Scully",
     role: "Voluntaria, 19 años",
     image: "/img/HowItWorks/avatar-img3.webp",
-    text: "El voluntariado me ha permitido conocer realidades diferentes y contribuir a mejorarlas. Ha sido una experiencia transformadora que recomiendo a todos los jóvenes.",
+    text: "Uvol me ayudó a encontrar actividades cercanas a mis intereses. Me gustó poder participar en causas reales y sentir que mi tiempo aportaba algo valioso.",
   },
   {
     name: "Brad Pills",
     role: "Voluntario, 25 años",
     image: "/img/HowItWorks/avatar-img1.webp",
-    text: "El voluntariado me ha permitido conocer realidades diferentes y contribuir a mejorarlas. Ha sido una experiencia transformadora que recomiendo a todos los jóvenes.",
+    text: "Antes no sabía por dónde empezar a hacer voluntariado. Con Uvol pude conocer organizaciones, inscribirme en eventos y conectar con personas que también quieren ayudar.",
   },
   {
     name: "Camelia Santos",
     role: "Voluntaria, 22 años",
     image: "/img/HowItWorks/avatar-img2.webp",
-    text: "El voluntariado me ha permitido conocer realidades diferentes y contribuir a mejorarlas. Ha sido una experiencia transformadora que recomiendo a todos los jóvenes.",
+    text: "La plataforma hace que participar sea mucho más fácil. Encontré oportunidades, seguí mi proceso y descubrí nuevas formas de aportar a mi comunidad.",
   },
 ];
 
@@ -42,7 +42,7 @@ export default function HowItWorksTestimonials() {
         </p>
       </motion.div>
 
-      <div className="mt-14 grid gap-x-8 gap-y-14 md:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-14 grid items-stretch gap-x-8 gap-y-14 md:grid-cols-2 lg:grid-cols-3">
         {testimonials.map((item, index) => (
           <motion.article
             key={item.name}
@@ -55,7 +55,7 @@ export default function HowItWorksTestimonials() {
               delay: index * 0.08,
               ease: "easeOut",
             }}
-            className={`relative rounded-[28px] border border-neutral-200 bg-white px-6 pb-8 pt-12 text-center shadow-sm transition-shadow hover:shadow-soft ${
+            className={`relative flex h-full flex-col rounded-[28px] border border-neutral-200 bg-white px-6 pb-8 pt-12 text-center shadow-sm transition-shadow hover:shadow-soft ${
               index === 2
                 ? "md:col-span-2 md:mx-auto md:w-full md:max-w-[380px] lg:col-span-1 lg:max-w-none"
                 : ""
@@ -70,13 +70,17 @@ export default function HowItWorksTestimonials() {
               />
             </div>
 
-            <p className="text-sm leading-6 text-neutral-600">"{item.text}"</p>
+            <p className="flex-1 text-sm leading-6 text-neutral-600">
+              "{item.text}"
+            </p>
 
-            <h3 className="mt-6 text-sm font-semibold text-neutral-900">
-              {item.name}
-            </h3>
+            <div className="mt-6">
+              <h3 className="text-sm font-semibold text-neutral-900">
+                {item.name}
+              </h3>
 
-            <p className="mt-1 text-xs text-neutral-500">{item.role}</p>
+              <p className="mt-1 text-xs text-neutral-500">{item.role}</p>
+            </div>
           </motion.article>
         ))}
       </div>

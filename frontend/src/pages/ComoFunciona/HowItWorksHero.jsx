@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import Section from "../../components/layout/Section";
+import { typography } from "../../styles/typography";
 
 export default function HowItWorksHero() {
   return (
@@ -12,11 +13,11 @@ export default function HowItWorksHero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.45, ease: "easeOut" }}
           >
-            <h1 className="text-4xl font-semibold leading-tight tracking-tight text-neutral-900 sm:text-5xl">
+            <h1 className={typography.heroTitle}>
               Haz voluntariado en 3 pasos
             </h1>
 
-            <p className="mx-auto mt-4 max-w-xl text-sm leading-6 text-neutral-600 sm:text-base">
+            <p className={`mx-auto mt-4 max-w-xl ${typography.paragraph}`}>
               Comienza tu camino como voluntario y genera impacto real en tu
               comunidad o en línea.
             </p>
@@ -43,11 +44,11 @@ export default function HowItWorksHero() {
           transition={{ duration: 0.45, ease: "easeOut" }}
           className="absolute left-1/2 top-1/2 z-10 mx-auto hidden w-full max-w-4xl -translate-x-1/2 -translate-y-1/2 flex-col items-center text-center lg:flex"
         >
-          <h1 className="text-4xl font-semibold tracking-tight text-neutral-900 sm:text-5xl lg:text-6xl">
+          <h1 className={typography.heroTitle}>
             Haz voluntariado en 3 pasos
           </h1>
 
-          <p className="mt-4 max-w-xl text-sm leading-6 text-neutral-600 sm:text-base">
+          <p className={`mt-4 max-w-xl ${typography.paragraph}`}>
             Comienza tu camino como voluntario y genera impacto real en tu
             comunidad o en línea.
           </p>

@@ -2,7 +2,8 @@ import { NavLink } from "react-router-dom";
 import Container from "./Container";
 
 const FOOTER_LINKS = [
-  { label: "Política de privacidad", to: "/privacidad" },
+  { label: "Política de privacidad", to: "/politica-de-privacidad" },
+  { label: "Términos y condiciones", to: "/terminos-y-condiciones" },
   { label: "Centro de ayuda", to: "/centro-de-ayuda" },
 ];
 
@@ -29,7 +30,7 @@ export default function Footer() {
             href="mailto:info@uvol.com"
             className="transition hover:text-neutral-900 lg:text-right"
           >
-            info@uvol.com
+            uvolleal@gmail.com
           </a>
         </div>
       </Container>

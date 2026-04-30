@@ -1,9 +1,11 @@
 import { motion } from "framer-motion";
 import Section from "../../components/layout/Section";
 import Button from "../../components/ui/Button";
+import { typography } from "../../styles/typography";
 
 export default function ForCompaniesHero() {
   const appUrl = import.meta.env.VITE_APP_URL || "";
+
   return (
     <Section className="!py-0">
       <div className="py-16 sm:py-20 lg:grid lg:min-h-[calc(100vh-56px)] lg:grid-cols-2 lg:items-center lg:gap-12 lg:py-0">
@@ -35,11 +37,13 @@ export default function ForCompaniesHero() {
             <span>Más de 100mil organizaciones</span>
           </div>
 
-          <h1 className="mt-6 text-4xl font-semibold tracking-tight text-neutral-900 sm:text-5xl lg:text-[56px] lg:leading-[1.08]">
+          <h1 className={`mt-6 ${typography.heroTitle}`}>
             Impulsa tu compromiso social como empresa
           </h1>
 
-          <p className="mx-auto mt-5 max-w-xl text-sm leading-6 text-neutral-600 sm:text-base lg:mx-0">
+          <p
+            className={`mx-auto mt-5 max-w-xl lg:mx-0 ${typography.paragraph}`}
+          >
             Conecta tu equipo con causas reales. Organiza voluntariado
             corporativo, fortalece tu impacto social y construye una cultura
             empresarial más humana.

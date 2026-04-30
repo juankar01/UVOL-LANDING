@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Section from "../../components/layout/Section";
+import { typography } from "../../styles/typography";
 
 export default function PrivacyHero() {
   const [openVideo, setOpenVideo] = useState(false);
@@ -14,14 +15,13 @@ export default function PrivacyHero() {
           transition={{ duration: 0.45, ease: "easeOut" }}
           className="mx-auto w-full max-w-6xl text-center"
         >
-          <h1 className="mx-auto max-w-5xl text-4xl font-semibold tracking-tight text-neutral-900 sm:text-5xl lg:text-[56px] lg:leading-[1.08]">
+          <h1 className={`mx-auto max-w-5xl ${typography.heroTitle}`}>
             Porque confiar en una red con propósito también es sentirse{" "}
             <span className="text-[#219653]">protegido</span>
           </h1>
 
-          <p className="mx-auto mt-5 max-w-3xl text-sm leading-6 text-neutral-600 sm:text-base">
+          <p className={`mx-auto mt-5 max-w-[340px] sm:max-w-3xl ${typography.paragraph}`}>
             Te ofrecemos un entorno confiable para que participes con
-            <br />
             tranquilidad y controles tu información en todo momento.
           </p>
 

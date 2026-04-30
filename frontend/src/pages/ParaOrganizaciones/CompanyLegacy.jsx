@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import Section from "../../components/layout/Section";
+import { typography } from "../../styles/typography";
 
 export default function CompanyLegacy() {
   return (
@@ -11,7 +12,7 @@ export default function CompanyLegacy() {
         transition={{ duration: 0.45, ease: "easeOut" }}
         className="text-center"
       >
-        <h2 className="mx-auto max-w-3xl text-3xl font-semibold tracking-tight text-neutral-900 sm:text-4xl lg:text-5xl">
+        <h2 className={`mx-auto max-w-3xl ${typography.sectionTitle}`}>
           Construye un <span className="text-[#219653]">legado</span> social
           <br />
           desde tu organización

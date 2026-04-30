@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import Section from "../../components/layout/Section";
 import Button from "../../components/ui/Button";
 import HeroGallery from "./HeroGallery";
+import { typography } from "../../styles/typography";
 
 export default function Hero() {
   const appUrl = import.meta.env.VITE_APP_URL || "";
@@ -36,12 +37,12 @@ export default function Hero() {
             <span>100 Usuarios activos</span>
           </div>
 
-          <h1 className="mx-auto mt-6 max-w-3xl text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl">
+          <h1 className={`mx-auto mt-6 max-w-3xl ${typography.heroTitle}`}>
             La red donde ayudar también
             <span className="block">—es hacer comunidad.</span>
           </h1>
 
-          <p className="mx-auto mt-4 max-w-xl text-sm text-neutral-600 sm:text-base">
+          <p className={`mx-auto mt-4 max-w-xl ${typography.paragraph}`}>
             Comparte tu impacto con una comunidad que no se queda quieta.
           </p>
 

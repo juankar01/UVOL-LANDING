@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import Section from "../../components/layout/Section";
 import Button from "../../components/ui/Button";
+import { typography } from "../../styles/typography";
 
 export default function PrivacySupport() {
   return (
@@ -12,7 +13,7 @@ export default function PrivacySupport() {
         transition={{ duration: 0.45, ease: "easeOut" }}
         className="mx-auto max-w-6xl rounded-[28px] bg-[#219653] px-6 py-12 text-center text-white sm:px-10 lg:py-14"
       >
-        <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
+        <h2 className={`${typography.sectionTitleSmall} text-white`}>
           Reportes y soporte
         </h2>
 
@@ -20,7 +21,7 @@ export default function PrivacySupport() {
           ¿Detectaste actividad sospechosa o te sientes inseguro?
         </p>
 
-        <p className="mx-auto mt-4 max-w-2xl text-sm leading-6 text-white/90 sm:text-base">
+        <p className={`mx-auto mt-4 max-w-2xl ${typography.paragraph} text-white/90`}>
           Accede al Centro de ayuda o usa el botón “Reportar” visible en todo
           momento para enviarnos tu caso. Nuestro equipo lo atenderá con
           prioridad.

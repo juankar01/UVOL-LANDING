@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import Section from "../../components/layout/Section";
+import { typography } from "../../styles/typography";
 
 const logos = ["G", "▦", "", "a", "∞", "✷"];
 
@@ -13,16 +14,14 @@ export default function CompanyLogos() {
         transition={{ duration: 0.45, ease: "easeOut" }}
         className="mx-auto max-w-5xl text-center"
       >
-        <h2 className="text-3xl font-semibold tracking-tight text-neutral-900 sm:text-4xl">
-          Confían en nosotros
-        </h2>
+        <h2 className={typography.sectionTitle}>Confían en nosotros</h2>
 
-        <p className="mx-auto mt-4 max-w-2xl text-sm leading-6 text-neutral-500">
+        <p className={`mx-auto mt-4 max-w-2xl ${typography.paragraph}`}>
           Estas y muchas más organizaciones están comprometidas con el impacto
           social. ¡Súmate tú también!
         </p>
 
-        <div className="mx-auto mt-10 flex max-w-4xl justify-center overflow-hidden">
+        <div className="mx-auto mt-10 max-w-4xl overflow-hidden">
           <motion.div
             animate={{ x: ["0%", "-50%"] }}
             transition={{
@@ -30,13 +29,26 @@ export default function CompanyLogos() {
               repeat: Infinity,
               ease: "linear",
             }}
-            className="flex w-max gap-16 text-4xl font-semibold text-neutral-300 sm:gap-20"
+            className="flex w-max"
           >
-            {[...logos, ...logos].map((logo, index) => (
-              <span key={index} className="min-w-16 text-center">
-                {logo}
-              </span>
-            ))}
+            <div className="flex shrink-0 items-center gap-16 pr-16 text-4xl font-semibold text-neutral-300 sm:gap-20 sm:pr-20">
+              {logos.map((logo, index) => (
+                <span key={`logo-a-${index}`} className="min-w-16 text-center">
+                  {logo}
+                </span>
+              ))}
+            </div>
+
+            <div
+              aria-hidden="true"
+              className="flex shrink-0 items-center gap-16 pr-16 text-4xl font-semibold text-neutral-300 sm:gap-20 sm:pr-20"
+            >
+              {logos.map((logo, index) => (
+                <span key={`logo-b-${index}`} className="min-w-16 text-center">
+                  {logo}
+                </span>
+              ))}
+            </div>
           </motion.div>
         </div>
       </motion.div>
