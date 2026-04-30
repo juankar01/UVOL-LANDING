@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 
 export default function FAQAccordion({ items = [] }) {
   const [openId, setOpenId] = useState(null);
@@ -24,10 +25,10 @@ export default function FAQAccordion({ items = [] }) {
                 {item.question}
               </span>
 
-              <span
-                className={`shrink-0 transition-transform duration-200 ${
-                  isOpen ? "rotate-180" : "rotate-0"
-                }`}
+              <motion.span
+                animate={{ rotate: isOpen ? 180 : 0 }}
+                transition={{ duration: 0.18, ease: "easeOut" }}
+                className="shrink-0"
                 aria-hidden="true"
               >
                 <svg
@@ -46,20 +47,24 @@ export default function FAQAccordion({ items = [] }) {
                     strokeLinejoin="round"
                   />
                 </svg>
-              </span>
+              </motion.span>
             </button>
 
-            <div
-              className={`grid overflow-hidden transition-all duration-300 ease-in-out ${
-                isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
-              }`}
-            >
-              <div className="overflow-hidden">
-                <p className="pb-5 pr-8 text-sm leading-6 text-neutral-600 sm:pb-6 sm:text-sm">
-                  {item.answer}
-                </p>
-              </div>
-            </div>
+            <AnimatePresence initial={false}>
+              {isOpen ? (
+                <motion.div
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: "auto", opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.22, ease: "easeOut" }}
+                  className="overflow-hidden"
+                >
+                  <p className="pb-5 pr-8 text-sm leading-6 text-neutral-600 sm:pb-6 sm:text-sm">
+                    {item.answer}
+                  </p>
+                </motion.div>
+              ) : null}
+            </AnimatePresence>
           </div>
         );
       })}
