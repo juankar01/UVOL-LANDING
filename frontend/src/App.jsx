@@ -1,6 +1,7 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
+import ScrollToTop from "./components/layout/ScrollToTop";
 
 import Home from "./pages/Inicio/Home";
 import HowItWorks from "./pages/ComoFunciona/HowItWorks";
@@ -11,6 +12,7 @@ import HelpCenter from "./pages/CentroAyuda/HelpCenter";
 export default function App() {
   return (
     <div className="app-scroll bg-white text-neutral-900">
+      <ScrollToTop />
       <Navbar />
 
       <main>
