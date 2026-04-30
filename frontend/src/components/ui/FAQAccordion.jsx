@@ -27,7 +27,7 @@ export default function FAQAccordion({ items = [] }) {
 
               <motion.span
                 animate={{ rotate: isOpen ? 180 : 0 }}
-                transition={{ duration: 0.18, ease: "easeOut" }}
+                transition={{ duration: 0.16, ease: "easeOut" }}
                 className="shrink-0"
                 aria-hidden="true"
               >
@@ -53,11 +53,10 @@ export default function FAQAccordion({ items = [] }) {
             <AnimatePresence initial={false}>
               {isOpen ? (
                 <motion.div
-                  initial={{ height: 0, opacity: 0 }}
-                  animate={{ height: "auto", opacity: 1 }}
-                  exit={{ height: 0, opacity: 0 }}
-                  transition={{ duration: 0.22, ease: "easeOut" }}
-                  className="overflow-hidden"
+                  initial={{ opacity: 0, y: -4 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -4 }}
+                  transition={{ duration: 0.12, ease: "easeOut" }}
                 >
                   <p className="pb-5 pr-8 text-sm leading-6 text-neutral-600 sm:pb-6 sm:text-sm">
                     {item.answer}
