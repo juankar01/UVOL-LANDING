@@ -106,8 +106,46 @@ const policySections = [
     ),
   },
   {
+    id: "habeas-data",
+    title: "6. Derechos sobre tus datos personales / Hábeas Data",
+    content: (
+      <>
+        <p>
+          En Colombia, el derecho de hábeas data está respaldado por el artículo
+          15 de la Constitución Política y por la Ley 1581 de 2012 sobre
+          protección de datos personales.
+        </p>
+
+        <p>
+          Como usuario de Uvol, puedes solicitar información sobre los datos
+          personales que tenemos asociados a tu cuenta, pedir su actualización,
+          corrección o eliminación cuando corresponda.
+        </p>
+
+        <ul>
+          <li>Conocer qué información personal tenemos registrada.</li>
+          <li>Solicitar la actualización o corrección de tus datos.</li>
+          <li>Preguntar para qué se usa tu información dentro de Uvol.</li>
+          <li>Solicitar la eliminación de tu cuenta o información asociada.</li>
+          <li>Revocar autorizaciones cuando sea aplicable según la ley.</li>
+        </ul>
+
+        <p>
+          Para ejercer estos derechos, puedes escribirnos a{" "}
+          <a
+            href="mailto:uvolleal@gmail.com"
+            className="font-medium text-neutral-900 underline underline-offset-4"
+          >
+            uvolleal@gmail.com
+          </a>{" "}
+          indicando tu solicitud y el correo asociado a tu cuenta.
+        </p>
+      </>
+    ),
+  },
+  {
     id: "terceros",
-    title: "6. Servicios externos",
+    title: "7. Servicios externos",
     content: (
       <p>
         Uvol puede utilizar servicios externos necesarios para su
@@ -119,7 +157,7 @@ const policySections = [
   },
   {
     id: "cookies",
-    title: "7. Cookies y almacenamiento técnico",
+    title: "8. Cookies y almacenamiento técnico",
     content: (
       <p>
         Actualmente Uvol no utiliza cookies publicitarias ni sistemas de
@@ -132,7 +170,7 @@ const policySections = [
   },
   {
     id: "reportes",
-    title: "8. Reportes y soporte",
+    title: "9. Reportes y soporte",
     content: (
       <p>
         Si un usuario detecta una actividad sospechosa, contenido inadecuado o
@@ -143,7 +181,7 @@ const policySections = [
   },
   {
     id: "eliminacion",
-    title: "9. Eliminación de cuenta",
+    title: "10. Eliminación de cuenta",
     content: (
       <p>
         Los usuarios pueden solicitar la eliminación de su cuenta comunicándose
@@ -155,7 +193,7 @@ const policySections = [
   },
   {
     id: "cambios-politica",
-    title: "10. Cambios en esta política",
+    title: "11. Cambios en esta política",
     content: (
       <p>
         Como Uvol está en crecimiento, esta política puede actualizarse cuando
@@ -166,7 +204,7 @@ const policySections = [
   },
   {
     id: "contacto",
-    title: "11. Contacto",
+    title: "12. Contacto",
     content: (
       <p>
         Si tienes preguntas sobre esta política o sobre el manejo de tu
