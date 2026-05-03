@@ -66,7 +66,7 @@ export default function PrivacyHero() {
             <div className="aspect-video w-full">
               <iframe
                 className="h-full w-full"
-                src="https://youtu.be/w0dYqz6W6us"
+                src="https://www.youtube.com/embed/w0dYqz6W6us?autoplay=1"
                 title="Video de privacidad Uvol"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
