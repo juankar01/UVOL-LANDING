@@ -172,6 +172,18 @@ export default function HelpCenter() {
           />
         </div>
 
+        <p className="mt-4 text-sm text-neutral-600">
+          ¿Necesitas una guía completa?{" "}
+          <a
+            href="/docs/manual-usuario-uvol.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium text-neutral-900 underline underline-offset-4 transition hover:text-neutral-600"
+          >
+            Ver manual de usuario
+          </a>
+        </p>
+
         <div className="mt-14 space-y-16">
           {filteredSections.map((section) => (
             <div key={section.title}>

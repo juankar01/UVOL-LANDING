@@ -48,7 +48,7 @@ export default function FeatureTimelineItem({
 
           {ctaText ? (
             <Button {...ctaProps} className="mt-6 gap-2">
-              {ctaText} <span aria-hidden>↗</span>
+              {ctaText}
             </Button>
           ) : null}
         </div>
@@ -83,13 +83,11 @@ export default function FeatureTimelineItem({
                   <p className="mt-2 text-sm text-neutral-600">{subtitle}</p>
                 ) : null}
 
-                <p className={`mt-4 ${typography.paragraph}`}>
-                  {description}
-                </p>
+                <p className={`mt-4 ${typography.paragraph}`}>{description}</p>
 
                 {ctaText ? (
                   <Button {...ctaProps} className="mt-6 gap-2">
-                    {ctaText} <span aria-hidden>↗</span>
+                    {ctaText}
                   </Button>
                 ) : null}
               </div>
@@ -109,13 +107,11 @@ export default function FeatureTimelineItem({
                   <p className="mt-2 text-sm text-neutral-600">{subtitle}</p>
                 ) : null}
 
-                <p className={`mt-4 ${typography.paragraph}`}>
-                  {description}
-                </p>
+                <p className={`mt-4 ${typography.paragraph}`}>{description}</p>
 
                 {ctaText ? (
                   <Button {...ctaProps} className="mt-6 gap-2">
-                    {ctaText} <span aria-hidden>↗</span>
+                    {ctaText}
                   </Button>
                 ) : null}
               </div>
