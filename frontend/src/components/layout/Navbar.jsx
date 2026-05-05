@@ -7,7 +7,9 @@ import { NAV_LINKS } from "../../data/nav";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const appUrl = import.meta.env.VITE_APP_URL || "";
+
+  const appUrl = import.meta.env.VITE_APP_URL?.replace(/\/$/, "") || "";
+  const loginUrl = appUrl ? `${appUrl}/login` : "#";
 
   return (
     <>
@@ -38,7 +40,13 @@ export default function Navbar() {
           </nav>
 
           <div className="hidden lg:block">
-            <Button as="a" href={appUrl ? `${appUrl}/login` : "#"} size="sm">
+            <Button
+              as="a"
+              href={loginUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              size="sm"
+            >
               Iniciar sesión
             </Button>
           </div>

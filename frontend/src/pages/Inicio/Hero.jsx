@@ -5,7 +5,8 @@ import HeroGallery from "./HeroGallery";
 import { typography } from "../../styles/typography";
 
 export default function Hero() {
-  const appUrl = import.meta.env.VITE_APP_URL || "";
+  const appUrl = import.meta.env.VITE_APP_URL?.replace(/\/$/, "") || "";
+  const registerUrl = appUrl ? `${appUrl}/login` : "#";
 
   return (
     <Section className="!py-0" containerClassName="text-center">
@@ -47,7 +48,13 @@ export default function Hero() {
           </p>
 
           <div className="mt-6 flex justify-center">
-            <Button as="a" href={appUrl ? `${appUrl}/register` : "#"} size="lg">
+            <Button
+              as="a"
+              href={registerUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              size="lg"
+            >
               ¡Empezar ahora!
             </Button>
           </div>

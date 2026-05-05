@@ -51,7 +51,7 @@ const steps = [
 
 export default function HowItWorksSteps() {
   const [activeStep, setActiveStep] = useState(steps[0]);
-  const appUrl = import.meta.env.VITE_APP_URL || "";
+  const appUrl = import.meta.env.VITE_APP_URL?.replace(/\/$/, "") || "";
   const loginUrl = appUrl ? `${appUrl}/login` : "#";
 
   return (
@@ -73,7 +73,7 @@ export default function HowItWorksSteps() {
                 className={`shrink-0 pb-1 transition ${
                   activeStep.id === step.id
                     ? "border-b-2 border-neutral-900 text-neutral-900"
-                    : "text-neutral-600 hover:text-neutral-900"
+                    : "text-neutral-600 hover:text-neutral-900 cursor-pointer"
                 }`}
               >
                 {step.tab}
@@ -115,7 +115,12 @@ export default function HowItWorksSteps() {
               </p>
 
               <div className="mt-6 flex justify-center">
-                <Button as="a" href={loginUrl}>
+                <Button
+                  as="a"
+                  href={loginUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   ¡Empezar ahora!
                 </Button>
               </div>
@@ -135,7 +140,7 @@ export default function HowItWorksSteps() {
                   className={`pb-1 transition ${
                     activeStep.id === step.id
                       ? "border-b-2 border-neutral-900 text-neutral-900"
-                      : "text-neutral-600 hover:text-neutral-900"
+                      : "text-neutral-600 hover:text-neutral-900 cursor-pointer"
                   }`}
                 >
                   {step.tab}
@@ -160,7 +165,12 @@ export default function HowItWorksSteps() {
                 </p>
 
                 <div className="mt-6 flex justify-center">
-                  <Button as="a" href={loginUrl}>
+                  <Button
+                    as="a"
+                    href={loginUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     ¡Empezar ahora!
                   </Button>
                 </div>

@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import FeatureTimelineItem from "../Inicio/FeatureTimelineItem";
 
 export default function CompanyFeatures() {
-  const appUrl = import.meta.env.VITE_APP_URL || "";
+  const appUrl = import.meta.env.VITE_APP_URL?.replace(/\/$/, "") || "";
   const registerUrl = appUrl ? `${appUrl}/register` : "#";
 
   return (

@@ -19,7 +19,12 @@ export default function FeatureTimelineItem({
   const isExternalCta = ctaHref?.startsWith("http");
 
   const ctaProps = isExternalCta
-    ? { as: "a", href: ctaHref }
+    ? {
+        as: "a",
+        href: ctaHref,
+        target: "_blank",
+        rel: "noopener noreferrer",
+      }
     : { as: Link, to: ctaHref || "#" };
 
   return (
@@ -47,7 +52,7 @@ export default function FeatureTimelineItem({
           <p className={`mt-4 ${typography.paragraph}`}>{description}</p>
 
           {ctaText ? (
-            <Button {...ctaProps} className="mt-6 gap-2">
+            <Button {...ctaProps} className="mt-6">
               {ctaText}
             </Button>
           ) : null}
@@ -86,7 +91,7 @@ export default function FeatureTimelineItem({
                 <p className={`mt-4 ${typography.paragraph}`}>{description}</p>
 
                 {ctaText ? (
-                  <Button {...ctaProps} className="mt-6 gap-2">
+                  <Button {...ctaProps} className="mt-6">
                     {ctaText}
                   </Button>
                 ) : null}
@@ -110,7 +115,7 @@ export default function FeatureTimelineItem({
                 <p className={`mt-4 ${typography.paragraph}`}>{description}</p>
 
                 {ctaText ? (
-                  <Button {...ctaProps} className="mt-6 gap-2">
+                  <Button {...ctaProps} className="mt-6">
                     {ctaText}
                   </Button>
                 ) : null}

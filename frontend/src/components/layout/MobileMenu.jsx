@@ -5,7 +5,8 @@ import { NAV_LINKS } from "../../data/nav";
 export default function MobileMenu({ open, onClose }) {
   if (!open) return null;
 
-  const appUrl = import.meta.env.VITE_APP_URL || "";
+  const appUrl = import.meta.env.VITE_APP_URL?.replace(/\/$/, "") || "";
+  const loginUrl = appUrl ? `${appUrl}/login` : "#";
 
   return (
     <div className="fixed inset-0 z-[100] lg:hidden">
@@ -49,7 +50,10 @@ export default function MobileMenu({ open, onClose }) {
         <div className="border-t border-neutral-200 px-5 py-5">
           <Button
             as="a"
-            href={appUrl ? `${appUrl}/login` : "#"}
+            href={loginUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={onClose}
             className="w-full justify-center py-4 text-base"
           >
             Iniciar sesión

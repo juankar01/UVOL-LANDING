@@ -4,7 +4,8 @@ import Button from "../../components/ui/Button";
 import { typography } from "../../styles/typography";
 
 export default function ForCompaniesHero() {
-  const appUrl = import.meta.env.VITE_APP_URL || "";
+  const appUrl = import.meta.env.VITE_APP_URL?.replace(/\/$/, "") || "";
+  const registerUrl = appUrl ? `${appUrl}/register` : "#";
 
   return (
     <Section className="!py-0">
@@ -52,7 +53,9 @@ export default function ForCompaniesHero() {
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row lg:justify-start">
             <Button
               as="a"
-              href={appUrl ? `${appUrl}/register` : "#"}
+              href={registerUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="justify-center"
             >
               Regístrate
