@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { Play } from "lucide-react";
 import Section from "../../components/layout/Section";
 import { typography } from "../../styles/typography";
 
@@ -20,7 +21,9 @@ export default function PrivacyHero() {
             <span className="text-[#219653]">protegido</span>
           </h1>
 
-          <p className={`mx-auto mt-5 max-w-[340px] sm:max-w-3xl ${typography.paragraph}`}>
+          <p
+            className={`mx-auto mt-5 max-w-[340px] sm:max-w-3xl ${typography.paragraph}`}
+          >
             Te ofrecemos un entorno confiable para que participes con
             tranquilidad y controles tu información en todo momento.
           </p>
@@ -45,7 +48,7 @@ export default function PrivacyHero() {
               aria-label="Reproducir video"
               className="absolute left-1/2 top-1/2 inline-flex h-16 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white text-neutral-900 shadow-soft transition hover:scale-105"
             >
-              ▶
+              <Play size={28} fill="currentColor" className="ml-1" />
             </button>
           </motion.div>
         </motion.div>
